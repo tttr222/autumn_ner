@@ -2,14 +2,11 @@
 
 A standalone supervised sequence-to-sequence deep learning system for Named Entity Recognition (NER). 
 
-At the character level, word representations are composed via character CNNs (window size=3) over each *character* embedding vector and its corresponding *character type* (lowercase, uppercase, punctation, etc) embedding vector. The CNN-based word representations are further concatenated to a corresponding *word* embedding vector and *word type* embedding vector. Finally, the word representations are passed into a bi-directional LSTM layer. The output of the LSTM unit at each timestep is fully-connected to its own separate softmax output layer so a prediction label ((IOB format)[https://en.wikipedia.org/wiki/Inside_Outside_Beginning]) can be made for each token. Here the final loss for an example is the mean loss over all output layers.
+At the character level, word representations are composed via character CNNs (window size=3) over each *character* embedding vector and its corresponding *character type* (lowercase, uppercase, punctation, etc) embedding vector. The CNN-based word representations are further concatenated to a corresponding *word* embedding vector and *word type* embedding vector. Finally, the word representations are passed into a bi-directional LSTM layer. The output of the LSTM unit at each timestep is fully-connected to its own separate softmax output layer so a prediction label ([https://en.wikipedia.org/wiki/Inside_Outside_Beginning](IOB format)) can be made for each token. Here the final loss for an example is the mean loss over all output layers.
 
 An advantage of this system is that it does not utilize an NLP pipeline (e.g. tagging, chunking, then NER). Here we train on IOB labels and predict them directly.
 
 ``Requires tensorflow 1.0.0 with *Fold* installed.``
-
-> Tung Tran
-> tung.tran@uky.edu
 
 # Training
 
@@ -25,7 +22,7 @@ The model is stored in a created directory named "saved_model".
 
 ## Using pre-trained embeddings
 
-By default, the model will not use pre-trained word embeddings. To use pre-trained word embeddings, utilize the `--embeddings` option. To use (GloVe)[https://nlp.stanford.edu/projects/glove/] embeddings for example, run:
+By default, the model will not use pre-trained word embeddings. To use pre-trained word embeddings, utilize the `--embeddings` option. To use [https://nlp.stanford.edu/projects/glove/](GloVe) embeddings for example, run:
 
 `python train.py --datapath=CoNLL2003 --embeddings=glove.6B.300d.txt`
 
@@ -115,17 +112,15 @@ Or alternatively, pass the input in as a file:
 
 The `test.py` is mostly only used to evaluate the model. Like `train.py` it will train on the `train.ner.txt` and tune on the `dev.ner.txt`, but it will additionally report separate evaluations on each `test.ner.txt` file. The commandline options are the same as that of `train.py`. This does not store the model for use by the `annotate.py` module.
 
-`python train.py --datapath=CoNLL2003`
+`python test.py --datapath=CoNLL2003`
 
 # Acknowledgements
 
-This model is heavily inspired by the model proposed in the following paper:
+This implementation is heavily inspired by the model proposed in the following paper:
 
 > Chiu, Jason PC, and Eric Nichols. "Named Entity Recognition with Bidirectional LSTM-CNNs." Transactions of the Association for Computational Linguistics 4 (2016): 357-370. (Preprint)[https://arxiv.org/pdf/1511.08308.pdf]
 
-The evaluation script is from the following repository and 
-is released under the MIT license. It is slightly modified 
-to be imported directly from the training module.
+The evaluation script is from the following repository and is released under the MIT license. The original script is slightly modified to be easily imported directly from the training component.
 
-[https://github.com/spyysalo/conlleval.py]
+https://github.com/spyysalo/conlleval.py
 
