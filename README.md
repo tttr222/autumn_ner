@@ -6,7 +6,11 @@ At the character level, word representations are composed via character CNNs (wi
 
 An advantage of this system is that it does not utilize an NLP pipeline (e.g. tagging, chunking, then NER). Here we train on IOB labels and predict them directly.
 
-``Requires tensorflow 1.0.0 with *Fold* installed.``
+~~~
+numpy
+sklearn
+tensorflow 1.0.0 with tensorflow-fold
+~~~
 
 # Training
 
@@ -81,7 +85,7 @@ optional arguments:
 
 # Annotating
 
-To annotate an unseen example, run `annotate.py` and pass the feed the input through STDIN. The annotator expects one sentence per line. As an example:
+To annotate an unseen example, run `annotate.py` and pass the input through STDIN. The annotator expects one sentence per line. As an example:
 
 `echo "Peter Minuit is credited with the purchase of the island of Manhattan in 1626." | python annotate.py`
 
@@ -124,3 +128,10 @@ The evaluation script is from the following repository and is released under the
 
 https://github.com/spyysalo/conlleval.py
 
+# Author
+
+~~~
+Tung Tran 
+tung.tran at uky.edu
+http://tttran.net
+~~~

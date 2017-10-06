@@ -71,14 +71,9 @@ def main(args):
     
     random.shuffle(trainset)
     
-    if len(devset) == 0:
-        X_train, y_train = zip(*trainset[:-3500]) 
-        X_dev, y_dev = zip(*trainset[-3500:]) 
-        print "Training on {}, tuning on {}".format(len(X_train),len(X_dev))
-    else:
-        X_train, y_train = zip(*trainset) 
-        X_dev, y_dev = zip(*devset) 
-        print "Training on {}, tuning on {}".format(len(X_train),len(X_dev))
+    X_train, y_train = zip(*trainset) 
+    X_dev, y_dev = zip(*devset) 
+    print "Training on {}, tuning on {}".format(len(X_train),len(X_dev))
         
     labels = []
     for lb in y_train + y_dev:
