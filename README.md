@@ -130,8 +130,8 @@ https://github.com/spyysalo/conlleval.py
 
 # Author
 
-~~~
-Tung Tran 
-tung.tran at uky.edu
-http://tttran.net
-~~~
+> Tung Tran  
+> tung.tran **[at]** uky.edu  
+> <http://tttran.net/>
+
+
