@@ -120,7 +120,7 @@ The `test.py` is mostly only used to evaluate the model. Like `train.py` it will
 
 # Acknowledgements
 
-Please consider citing the following paper(s) if you use this software in your work:
+Please consider citing the following paper(s) if you use this software in your work.
 
 This implementation is used in the following system:
 
