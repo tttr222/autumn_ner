@@ -122,13 +122,15 @@ The `test.py` is mostly only used to evaluate the model. Like `train.py` it will
 
 Please consider citing the following paper(s) if you use this software in your work:
 
+This implementation has been applied in the following system:
+
 > Tung Tran and Ramakanth Kavuluru. "Exploring a Deep Learning Pipeline for the BioCreative VI Precision Medicine Task." In Proceedings of the BioCreative VI Workshop, pp. 107-110, 2017.
 
 ```
 @inproceedings{tran2017exploring,
   title={Exploring a Deep Learning Pipeline for the BioCreative VI Precision Medicine Task},
   author={Tran, Tung and Kavuluru, Ramakanth},
-  booktitle={BioCreative VI Workshop},
+  booktitle={Proceedings of the BioCreative VI Workshop},
   pages={107--110},
   year={2017}
 }
