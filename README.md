@@ -120,6 +120,20 @@ The `test.py` is mostly only used to evaluate the model. Like `train.py` it will
 
 # Acknowledgements
 
+Please consider citing the following paper(s) if you use this software in your work:
+
+> Tung Tran and Ramakanth Kavuluru. "Exploring a Deep Learning Pipeline for the BioCreative VI Precision Medicine Task." In Proceedings of the BioCreative VI Workshop, pp. 107-110, 2017.
+
+```
+@inproceedings{tran2017exploring,
+  title={Exploring a Deep Learning Pipeline for the BioCreative VI Precision Medicine Task},
+  author={Tran, Tung and Kavuluru, Ramakanth},
+  booktitle={BioCreative VI Workshop},
+  pages={107--110},
+  year={2017}
+}
+```
+
 This implementation is heavily inspired by the model proposed in the following paper:
 
 > Chiu, Jason PC, and Eric Nichols. "Named Entity Recognition with Bidirectional LSTM-CNNs." Transactions of the Association for Computational Linguistics 4 (2016): 357-370. [Preprint](https://arxiv.org/pdf/1511.08308.pdf)
